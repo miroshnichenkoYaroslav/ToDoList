@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+//#import "Tasks+CoreDataClass.h"
 
 @interface AppDelegate ()
 
@@ -16,6 +17,43 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    // Глобально убрал лишние строки для таблиц.
+    [[UITableView appearance] setTableFooterView:[[UIView alloc] initWithFrame:CGRectZero]];
+    
+//    NSManagedObject *task = [NSEntityDescription insertNewObjectForEntityForName:@"Tasks" inManagedObjectContext:self.persistentContainer.viewContext];
+//
+//    NSUInteger units = NSCalendarUnitYear | NSCalendarUnitMonth | NSCalendarUnitDay;
+//    NSDateComponents *comps = [[NSCalendar currentCalendar] components:units fromDate:[NSDate date]];
+//    // Add one day
+//    comps.day = comps.day + 2; // no worries: even if it is the end of the month it will wrap to the next month, see doc
+//    // Recompose a new date, without any time information (so this will be at midnight)
+//    NSDate *tomorrowMidnight = [[NSCalendar currentCalendar] dateFromComponents:comps];
+//
+//
+//    [task setValue:@"Важная задача" forKey:@"name"];
+//    [task setValue:[NSNumber numberWithBool:YES] forKey:@"isImportant"];
+//    [task setValue:[NSNumber numberWithBool:YES] forKey:@"isPersonal"];
+//    [task setValue:[NSNumber numberWithBool:YES] forKey:@"isUrgent"];
+//    [task setValue:[NSNumber numberWithBool:YES] forKey:@"isDone"];
+//    [task setValue:[NSDate date] forKey:@"date"];
+
+//    NSError *error = nil;
+//    if (![self.persistentContainer.viewContext save:&error]) {
+//        NSLog(@"%@", [error localizedDescription]);
+//    }
+//
+//
+//    NSFetchRequest* request = [[NSFetchRequest alloc] initWithEntityName:@"Tasks"];
+//
+//    NSEntityDescription* description = [NSEntityDescription entityForName:@"Tasks" inManagedObjectContext:self.persistentContainer.viewContext];
+//
+//    [request setEntity:description];
+//    [request setResultType:NSDictionaryResultType];
+//
+//    NSError* requestError = nil;
+
+//    NSArray* resultArray = [self.persistentContainer.viewContext executeFetchRequest:request error:&requestError];
+
     // Override point for customization after application launch.
     return YES;
 }
